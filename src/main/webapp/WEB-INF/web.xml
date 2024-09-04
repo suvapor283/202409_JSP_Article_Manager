@@ -29,4 +29,14 @@
     <servlet-name>PrintDanServlet</servlet-name>
     <url-pattern>/PrintDanServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DBConnectTestServlet</display-name>
+    <servlet-name>DBConnectTestServlet</servlet-name>
+    <servlet-class>com.koreaIT.jsp.am.DBConnectTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DBConnectTestServlet</servlet-name>
+    <url-pattern>/DBConnectTestServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

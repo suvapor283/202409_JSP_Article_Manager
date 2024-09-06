@@ -22,12 +22,8 @@ public class ArticleDeleteServlet extends HttpServlet {
 	private final String USERNAME = "root";
 	private final String PASSWORD = "";
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8;");
-
-		response.getWriter().append("<script>alert('정말 삭제하시겠습니까?'); location.replace('../article/list');</script>");
 
 		Connection connection = null;
 
@@ -43,6 +39,7 @@ public class ArticleDeleteServlet extends HttpServlet {
 			
 			DBUtil.delete(connection, sql);
 			
+			response.getWriter().append(String.format("<script>alert('%d번 글이 삭제되었습니다.'); location.replace('../article/list');</script>", id));
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (Exception e) {

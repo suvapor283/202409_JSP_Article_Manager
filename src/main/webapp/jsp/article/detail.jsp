@@ -15,6 +15,7 @@
 </head>
 <body>
 	<h2>Article Detail</h2>
+	
 	<div>
 		<div><%=articleMap.get("id")%>번 게시물 상세보기</div>
 		<div>작성일 : <%=articleMap.get("regDate")%> </div>
@@ -22,7 +23,10 @@
 		<div>제목 : <%=articleMap.get("title")%> </div>
 		<div>내용 : <%=articleMap.get("body")%> </div>
 	</div>
-	<a href="list">목록</a>
-	<a href="delete?id=<%=articleMap.get("id")%>">삭제</a>
+	
+	<div>
+		<div><a href="list">목록</a></div>
+		<div><a href="delete?id=<%=articleMap.get("id")%>">삭제</a></div>
+	</div>
 </body>
 </html>

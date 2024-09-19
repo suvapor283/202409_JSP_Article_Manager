@@ -26,7 +26,7 @@
 		<div>
 			<div><button>수정</button></div>
 			<div><a href="list">목록</a></div>
-			<div><a href="delete?id=<%= articleMap.get("id") %>">삭제</a></div>
+			<div><a href="delete?id=<%= articleMap.get("id") %>" onclick="if(confirm('정말 삭제하시겠습니까?') == false) return false;">삭제</a></div>
 		</div>
 	</form>
 </body>

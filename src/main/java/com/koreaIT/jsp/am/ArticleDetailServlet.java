@@ -29,9 +29,9 @@ public class ArticleDetailServlet extends HttpServlet {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-			
-			int id = Integer.parseInt(request.getParameter("id"));
 
+			int id = Integer.parseInt(request.getParameter("id"));
+			
 			SecSql sql = new SecSql();
 			sql.append("SELECT * FROM article");
 			sql.append("WHERE id = ?", id);

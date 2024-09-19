@@ -21,12 +21,13 @@ public class ArticleDeleteServlet extends HttpServlet {
 	private final String URL = "jdbc:mysql://localhost:3306/2024_09_jsp_am?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeNehavior=convertToNull";
 	private final String USERNAME = "root";
 	private final String PASSWORD = "";
-
+			
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		response.setContentType("text/html; charset=UTF-8;");
-
+		
 		Connection connection = null;
-
+		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
@@ -39,7 +40,8 @@ public class ArticleDeleteServlet extends HttpServlet {
 			
 			DBUtil.delete(connection, sql);
 			
-			response.getWriter().append(String.format("<script>alert('%d번 글이 삭제되었습니다.'); location.replace('../article/list');</script>", id));
+			response.getWriter().append(String.format("<script>alert('%d번 글이 삭제되었습니다'); location.replace('list');</script>", id));
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (Exception e) {

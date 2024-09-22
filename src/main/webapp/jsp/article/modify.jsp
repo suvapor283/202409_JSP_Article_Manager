@@ -13,7 +13,7 @@
 <title>수정</title>
 </head>
 <body>
-	<form action="doModify" method="get">
+	<form action="doModify" method="post">
 		<div>	
 			<input type="hidden" name="id" value="<%= articleMap.get("id") %>"/>
 			<div><%= articleMap.get("id") %>번 게시물 수정</div>

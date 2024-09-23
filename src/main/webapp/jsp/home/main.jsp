@@ -9,6 +9,8 @@
 <body>
 	<h1>메인 페이지</h1>
 	<div><a href="../member/join">회원가입</a></div>
+	<div><a href="../member/login">로그인</a></div>
+	<div><a href="../member/logout">로그아웃</a></div>
 	<div><a href="../article/list">게시물 리스트</a></div>
 </body>
 </html>
